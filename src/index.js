@@ -5,6 +5,6 @@ app.get("/api/yesno", (req, res, next) => {
     res.json(Math.random() > .5);
 });
 
-app.listen(3999, () => {
-    console.log("Server running on port 3999");
+app.listen(process.env.PORT || 5000, () => {
+    console.log("Server running on port 5000");
 });
