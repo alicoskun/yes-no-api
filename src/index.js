@@ -1,8 +1,8 @@
 let express = require("express");
 let app = express();
 
-app.get("/api/yesno", (req, res, next) => {
-    res.json(Math.random() > .5);
+app.get("/", (req, res, next) => {
+    res.json(Math.random() > .5 ? 'yes' : 'no');
 });
 
 app.listen(process.env.PORT || 5000, () => {
